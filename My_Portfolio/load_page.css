@@ -1,0 +1,726 @@
+/* Styles for the loading screen */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/free-vector/dark-blue-memphis-blog-banner-template_53876-98946.jpg?t=st=1720267020~exp=1720270620~hmac=fc79203f50c33ba01dd989bb294433eb73eef486beb09eeb8093ac3b65d0116b&w=1800');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Styles for the loading box */
+#loading-box {
+    padding: 50px 100px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    text-align: center;
+}
+
+#loading-box h1 {
+    font-size: 3em; /* Increased font size */
+    font-weight: bold;
+    color: rgba(247, 243, 243, 0.952); /* Text color */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Example font family, you can change it to your preference */
+}
+
+#loading-percentage {
+    margin-top: 20px;
+    font-size: 3em;
+    color: #f4f4f4;
+}
+
+/* Styles for the actual content */
+#content {
+    display: none; /* Initially hide the content */
+    height: 3%;
+    width: 100%;
+    position: solid;
+    overflow: hidden;
+}
+
+#hover-message {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red;
+}
+
+/* Show the hover message on hover */
+#loading-box:hover #hover-message {
+    display: block;
+}
+
+/* Styles for the navbar */
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for even spacing */
+    background: linear-gradient(90deg, #000428, #004e92);
+    padding: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    position: relative;
+    margin: 0 120px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgb(249, 241, 241);
+    color: rgb(13, 2, 2);
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #060202;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3; /* Ensure dropdown is above other elements */
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: rgb(218, 97, 22);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #c40808;
+}
+
+/* Show the dropdown on hover */
+.navbar li:hover .dropdown-content {
+    display: block;
+}
+
+/* Styles for the main content */
+.main-content {
+    display: flex;
+    height: calc(100vh - 50px); /* Adjust height based on the navbar height */
+    position: relative;
+    z-index: 1; /* Ensure main content is above the background */
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-80px);
+    transform: translateX(-60px);
+    /*transform: translateX(-100px);*/ 
+}
+
+.left img {
+    width: 100%; /* Adjust the width to decrease the size */
+    max-width: 300px; /* Optional: set a maximum width in pixels */
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners for the image */
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    align-items: center; /* Align content to the left */
+    text-align: center; /* Center text horizontally */
+    padding-left: 50px; /* Adjust padding for positioning */
+}
+
+.right h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ecbe19;
+    padding: 10px; /* Reduce padding for closer centering */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.white-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+    max-width: 600px; /* Optional: set maximum width */
+    margin: 0 auto 20px; /* Center horizontally and add bottom margin */
+}
+
+.white-box p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.about-me {
+    background-color: rgb(11, 1, 1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+    max-width: 600px; /* Optional: set maximum width */
+    margin: 0 auto; /* Center horizontally */
+    text-align: left; /* Align text to the left */
+}
+
+.about-me h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #37f90b;
+    margin-bottom: 10px;
+    font-style: bold;
+}
+
+.about-me p {
+    font-size: 1.1em;
+    color: #b61212;
+    text-decoration: solid;
+    font-style: italic;
+}
+
+#moving-name {
+    position: relative;
+    white-space: nowrap;
+    animation: moveName 6s linear infinite;
+    font-size: 35px;
+    font-weight: bold;
+    top: 20px; /* Adjust this value to position vertically */
+    z-index: 1000; /* Ensure this is on top of other elements */
+    color: white; /* Adjust the color if needed */
+    margin-top: 20px; /* Space below the previous element */
+}
+
+#educate
+{
+    display: flex;
+}
+
+#prof
+{
+    font-size: 3em; /* Increase the font size */
+    font-weight: italic; /* Make the text bold */
+    color: #050403; /* Text color */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 1px; /* Increase letter spacing */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); /* Add a text shadow */
+    margin-bottom: 20px; /* Add some space below the heading */
+    padding: 0px;
+    margin: 0px;
+}
+
+.proficiency-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.proficiency-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.proficiency-item {
+    margin-bottom: 10px;
+}
+
+.proficiency-bar {
+    width: 50%;
+    background-color: #bdc3c7;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.proficiency-bar-fill {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    transition: width 2s ease-out;
+}
+
+.frontend { background-color: #e74c3c; width: 75%; }
+.backend { background-color: #3498db; width: 25%; }
+.programming { background-color: #2ecc71; width: 50%; }
+
+.prof-imag {
+    flex: none;
+    position: relative;
+}
+
+.proficiency-image {
+    width: 100%;
+    max-height: calc(3 * 100px + 20px); /* Three bars height + margins */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+}
+
+.proficiency-image:hover {
+    transform: scale(1.1);
+    filter: blur(2px);
+}
+
+
+/* Styling for the education section */
+.education-section {
+    padding: 50px 0;
+    /*background-color: #0655a5; /* Light background color */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.education-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, #f6d365 0%, #fda085 100%); /* Gradient background */
+    opacity: 0; /* Initial opacity */
+    z-index: -1; /* Place behind the content */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.education-section:hover::before {
+    opacity: 0.9; /* Hover opacity */
+}
+
+.education-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; /* Ensure text is above the background */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.education-section:hover h2 {
+    color: #2d0ade; /* Text color on hover */
+}
+
+.education-section p {
+    font-size: 1.2em;
+    color: #010003;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Ensure text is above the background */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.education-section:hover p {
+    color: #050000; /* Text color on hover */
+}
+
+/* Styling for results section */
+.results-section {
+    padding: 50px 0;
+    /*background-color: #590fe2;*/
+    text-align: right;
+}
+
+#head
+{
+    width: 100%;
+    text-align: center; /* Ensure the content is centered */
+    padding: 20px 0;
+}
+
+.results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.result-box {
+    background-color: #82d86a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.result-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.result-box h3 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 1.2em;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+/* Slideshow Container */
+.slideshow-container1 {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Hide all slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Fade animation for slides */
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+.projects-section {
+    text-align: center; /* Center align content */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 20%;
+    margin: auto;
+}
+
+/* Hide all slides by default */
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+/* Fade animation for slides */
+.fade {
+    animation: fade 1.5s;
+}
+
+.mySlides img {
+    width: 30%;
+    height: 30%;
+}
+
+.description-cloud {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    left: -100px;
+    background: rgba(143, 182, 236, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+}
+
+.mySlides.active .description-cloud {
+    display: block; /* Show when the slide is active */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Social Media Section Styling */
+.social-media-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-media-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media-icon:hover {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+/* Specific Color for Each Icon */
+.linkedin {
+    color: #0077b5;
+}
+
+.github {
+    color: #333;
+}
+
+.twitter {
+    color: #1da1f2;
+}
+
+.instagram {
+    color: #e4405f;
+}
+
+.email {
+    color: #c71610;
+}
+
+/* Font Awesome Icons */
+.fab, .fas {
+    margin: 0;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-left h2, .footer-center h2, .footer-right h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-left p, .footer-center a, .footer-right a {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.footer-center a, .footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-center a:hover, .footer-right a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2620&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace 'wave.gif' with your wave animation URL */
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: wave-animation 10s linear infinite;
+    z-index: -1; /* Place the wave animation behind the content */
+}
+
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
