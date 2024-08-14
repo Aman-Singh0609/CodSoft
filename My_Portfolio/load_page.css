@@ -12,19 +12,19 @@
     z-index: 9999;
 }
 
-/* Styles for the loading box */
+
 #loading-box {
-    padding: 50px 100px; /* Increased padding for better spacing */
+    padding: 50px 100px; 
     border-radius: 10px;
     text-align: center;
 }
 
 #loading-box h1 {
-    font-size: 3em; /* Increased font size */
+    font-size: 3em; 
     font-weight: bold;
-    color: rgba(247, 243, 243, 0.952); /* Text color */
+    color: rgba(247, 243, 243, 0.952); 
     margin: 0;
-    font-family: Arial, sans-serif; /* Example font family, you can change it to your preference */
+    font-family: Arial, sans-serif; 
 }
 
 #loading-percentage {
@@ -33,9 +33,9 @@
     color: #f4f4f4;
 }
 
-/* Styles for the actual content */
+
 #content {
-    display: none; /* Initially hide the content */
+    display: none; 
     height: 3%;
     width: 100%;
     position: solid;
@@ -50,18 +50,18 @@
     color: red;
 }
 
-/* Show the hover message on hover */
+
 #loading-box:hover #hover-message {
     display: block;
 }
 
-/* Styles for the navbar */
+
 .navbar {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-between; /* Changed to space-between for even spacing */
+    justify-content: space-between;
     background: linear-gradient(90deg, #000428, #004e92);
     padding: 20px;
 }
@@ -98,7 +98,7 @@
     background-color: #060202;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 3; /* Ensure dropdown is above other elements */
+    z-index: 3; 
     top: 100%;
     left: 0;
 }
@@ -114,17 +114,17 @@
     background-color: #c40808;
 }
 
-/* Show the dropdown on hover */
+
 .navbar li:hover .dropdown-content {
     display: block;
 }
 
-/* Styles for the main content */
+
 .main-content {
     display: flex;
-    height: calc(100vh - 50px); /* Adjust height based on the navbar height */
+    height: calc(100vh - 50px); 
     position: relative;
-    z-index: 1; /* Ensure main content is above the background */
+    z-index: 1; 
 }
 
 .left {
@@ -134,30 +134,30 @@
     align-items: center;
     transform: translateY(-80px);
     transform: translateX(-60px);
-    /*transform: translateX(-100px);*/ 
+    
 }
 
 .left img {
-    width: 100%; /* Adjust the width to decrease the size */
-    max-width: 300px; /* Optional: set a maximum width in pixels */
+    width: 68%; 
+    height: 20%; 
     height: auto;
-    border-radius: 10px; /* Optional: rounded corners for the image */
+    border-radius: 10px; 
 }
 
 .right {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Ensure content stacks vertically */
-    align-items: center; /* Align content to the left */
-    text-align: center; /* Center text horizontally */
-    padding-left: 50px; /* Adjust padding for positioning */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding-left: 50px; 
 }
 
 .right h1 {
     font-size: 3em;
     font-weight: bold;
     color: #ecbe19;
-    padding: 10px; /* Reduce padding for closer centering */
+    padding: 10px; 
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -166,9 +166,9 @@
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
-    max-width: 600px; /* Optional: set maximum width */
-    margin: 0 auto 20px; /* Center horizontally and add bottom margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: 0 auto 20px; 
 }
 
 .white-box p {
@@ -180,10 +180,10 @@
     background-color: rgb(11, 1, 1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
-    max-width: 600px; /* Optional: set maximum width */
-    margin: 0 auto; /* Center horizontally */
-    text-align: left; /* Align text to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: left; 
 }
 
 .about-me h2 {
@@ -207,10 +207,10 @@
     animation: moveName 6s linear infinite;
     font-size: 35px;
     font-weight: bold;
-    top: 20px; /* Adjust this value to position vertically */
-    z-index: 1000; /* Ensure this is on top of other elements */
-    color: white; /* Adjust the color if needed */
-    margin-top: 20px; /* Space below the previous element */
+    top: 20px; 
+    z-index: 1000; 
+    color: white; 
+    margin-top: 20px; 
 }
 
 #educate
@@ -220,13 +220,13 @@
 
 #prof
 {
-    font-size: 3em; /* Increase the font size */
-    font-weight: italic; /* Make the text bold */
-    color: #050403; /* Text color */
-    text-transform: uppercase; /* Make the text uppercase */
-    letter-spacing: 1px; /* Increase letter spacing */
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); /* Add a text shadow */
-    margin-bottom: 20px; /* Add some space below the heading */
+    font-size: 3em; 
+    font-weight: italic; 
+    color: #050403; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); 
+    margin-bottom: 20px; 
     padding: 0px;
     margin: 0px;
 }
@@ -276,7 +276,7 @@
 
 .proficiency-image {
     width: 100%;
-    max-height: calc(3 * 100px + 20px); /* Three bars height + margins */
+    max-height: calc(3 * 100px + 20px); 
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -289,13 +289,12 @@
 }
 
 
-/* Styling for the education section */
+
 .education-section {
     padding: 50px 0;
-    /*background-color: #0655a5; /* Light background color */
     text-align: center;
     position: relative;
-    overflow: hidden; /* Ensure content does not overflow */
+    overflow: hidden; 
 }
 
 .education-section::before {
@@ -306,13 +305,13 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(135deg, #f6d365 0%, #fda085 100%); /* Gradient background */
-    opacity: 0; /* Initial opacity */
-    z-index: -1; /* Place behind the content */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    opacity: 0; 
+    z-index: -1; 
+    transition: opacity 0.3s ease;
 }
 
 .education-section:hover::before {
-    opacity: 0.9; /* Hover opacity */
+    opacity: 0.9; 
 }
 
 .education-section h2 {
@@ -320,12 +319,12 @@
     color: #333;
     margin-bottom: 20px;
     position: relative;
-    z-index: 1; /* Ensure text is above the background */
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    z-index: 1; 
+    transition: color 0.3s ease; 
 }
 
 .education-section:hover h2 {
-    color: #2d0ade; /* Text color on hover */
+    color: #2d0ade; 
 }
 
 .education-section p {
@@ -334,25 +333,25 @@
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    z-index: 1; /* Ensure text is above the background */
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    z-index: 1; 
+    transition: color 0.3s ease; 
 }
 
 .education-section:hover p {
-    color: #050000; /* Text color on hover */
+    color: #050000; 
 }
 
-/* Styling for results section */
+
 .results-section {
     padding: 50px 0;
-    /*background-color: #590fe2;*/
+    
     text-align: right;
 }
 
 #head
 {
     width: 100%;
-    text-align: center; /* Ensure the content is centered */
+    text-align: center; 
     padding: 20px 0;
 }
 
@@ -390,19 +389,19 @@
     margin-bottom: 5px;
 }
 
-/* Slideshow Container */
+
 .slideshow-container1 {
     position: relative;
     max-width: 100%;
     margin: auto;
 }
 
-/* Hide all slides by default */
+
 .mySlides {
     display: none;
 }
 
-/* Navigation Arrows */
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -435,7 +434,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Fade animation for slides */
+
 .fade {
     animation: fade 1.5s;
 }
@@ -446,8 +445,8 @@
 }
 
 .projects-section {
-    text-align: center; /* Center align content */
-    padding: 20px; /* Add padding for spacing */
+    text-align: center; 
+    padding: 20px; 
 }
 
 .slideshow-container {
@@ -456,13 +455,13 @@
     margin: auto;
 }
 
-/* Hide all slides by default */
+
 .mySlides {
     display: none;
     position: relative;
 }
 
-/* Fade animation for slides */
+
 .fade {
     animation: fade 1.5s;
 }
@@ -482,11 +481,11 @@
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
 .mySlides.active .description-cloud {
-    display: block; /* Show when the slide is active */
+    display: block;
 }
 
 .prev, .next {
@@ -512,7 +511,7 @@
     right: 10px;
 }
 
-/* Social Media Section Styling */
+
 .social-media-section {
     text-align: center;
     padding: 20px;
@@ -550,7 +549,7 @@
     color: #f1f1f1;
 }
 
-/* Specific Color for Each Icon */
+
 .linkedin {
     color: #0077b5;
 }
@@ -571,12 +570,12 @@
     color: #c71610;
 }
 
-/* Font Awesome Icons */
+
 .fab, .fas {
     margin: 0;
 }
 
-/* Contact Section Styling */
+
 .contact-section {
     padding: 20px;
     background-color: #f9f9f9;
@@ -691,8 +690,6 @@ footer {
     font-size: 0.8em;
 }
 
-
-
 @keyframes fade {
     from {
         opacity: 0.4;
@@ -713,10 +710,9 @@ footer {
     background-repeat: repeat-x;
     background-size: cover;
     animation: wave-animation 10s linear infinite;
-    z-index: -1; /* Place the wave animation behind the content */
-}
+    z-index: -1; }
 
-/* General page styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
