@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Design Mastery | Learning Landing Page</title>
+    <title>Learning Landing Page</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
@@ -17,6 +17,7 @@
             --max-width: 1200px;
             --nav-bg-color: #e88145;
             --nav-hover-bg-color: #77cd16;
+            --background-image: url('https://www.google.com/imgres?q=google%20cloud%20image&imgurl=https%3A%2F%2Fstorage.googleapis.com%2Fgweb-uniblog-publish-prod%2Foriginal_images%2FGoogle_Cloud_Covered.png&imgrefurl=https%3A%2F%2Fhevodata.com%2Flearn%2Fdata-ingestion-google-cloud%2F&docid=RpYOQInOg-pD8M&tbnid=CBK8h8P7vpLI_M&vet=12ahUKEwiD2Ia44fSHAxUEV2wGHXrXMyMQM3oECF4QAA..i&w=2880&h=1200&hcb=2&ved=2ahUKEwiD2Ia44fSHAxUEV2wGHXrXMyMQM3oECF4QAA'); 
         }
 
         * {
@@ -28,6 +29,10 @@
         body {
             font-family: "Poppins", sans-serif;
             background-color: var(--secondary-color);
+            background-image: var(--background-image);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
         }
 
         nav {
@@ -231,7 +236,7 @@
         }
     </style>
 </head>
-<body style="background-color: rgb(237, 112, 112);">
+<body>
     <nav>
         <div class="nav__logo"><a href="#">Cloud Learning</a></div>
         <ul class="nav__links">
@@ -240,20 +245,20 @@
             <li class="link"><a href="#"><font style="color: black;">Services</font></a></li>
             <li class="link"><a href="#"><font style="color: black;">Courses</font></a></li>
             <li class="link"><a href="#"><font style="color: black;">Blog</font></a></li>
-            <li class="link"><a href="#"class="nav__btn">Register</a></li>
+            <li class="link"><a href="#" class="nav__btn">Register</a></li>
         </ul>
     </nav>
-    <section class="container">
+    <section class="container" style="background-color: #333333;">
         <div class="content__container">
             <h1>
                 <span class="heading__1"> CLOUD COMPUTING AND VIRTUALIZATION</span><br />
-                <span class="heading__2">UPCOMING CHANGE</span>
+                <span class="heading__2">FUTURE</span>
             </h1>
             <p><font style="background-color: rgb(233, 153, 169);">
                 Cloud computing is transforming the technology landscape by offering scalable, on-demand access to computing resources, which significantly boosts business agility and operational efficiency. By minimizing the reliance on physical hardware and facilitating remote work, cloud computing streamlines IT management and drives cost savings. Advances in AI and machine learning within cloud environments are propelling innovation in data analysis, automation, and intelligent decision-making. As a cornerstone of digital transformation, cloud computing is poised to revolutionize industries, enhance cybersecurity, and create a more interconnected and intelligent global ecosystem.
                 </font>
             </p>
-            <form>
+            <form style="transform: translateX(50px);">
                 <input type="text" placeholder="What do you want to learn" />
                 <button type="submit"><font style="color: #333333;">Search Course</font></button>
             </form>
